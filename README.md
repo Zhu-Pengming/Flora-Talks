@@ -13,7 +13,7 @@ The data preparation phase involves scraping note and comment data from Xiaohong
   ### # Comment word cloud 
   
   #### ## Powder 
-  ![](https://github.com/Zhu-Pengming/Flora-Talks/blob/main/Comment%20word%20cloud/wordcloud_powder.png)
+  ![](https://github.com/Zhu-Pengming/Flora-Talks/blob/main/NLP/Comment%20word%20cloud/wordcloud_powder.png)
   
   #### ## Rust
   ![](https://github.com/Zhu-Pengming/Flora-Talks/blob/main/Comment%20word%20cloud/wordcloud_rust.png)
