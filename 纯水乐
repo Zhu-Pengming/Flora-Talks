@@ -1,0 +1,10 @@
+语音转文字（TextView) 科大讯飞
+
+Android + RecyclerView
+聊天机器人
+用户可以发送： 文字，图片，语音
+机器人输出： 文字
+
+
+数据整体（图片+文字）
+数据处理 （图片（cv分类）+ huggingface 描述 ， 用户描述）------> nlp -----> output
