@@ -1,4 +1,4 @@
-# Natural language processing
+# PlantAdvisorGPT2
 
 ## Data Preparation
 
@@ -22,16 +22,49 @@ The data preparation phase involves scraping note and comment data from Xiaohong
   
   ## Model Architecture
   The model utilizes the pre-trained GPT-2, a large transformer-based model known for its effectiveness in natural language processing tasks. The fine-tuning adapts GPT-2 to generate responses based on plant disease-related queries.
+
+
+  ### Since there are very few such data sets, I originally intended to get the data (crawlers) from the comments on small red books. However, although I cleaned the data and generated a word cloud map, the model failed to deliver the desired results. Since the initial data set was not working well, I switched to the data set from Plantwise Plus Knowledge Bank. This dataset contains solutions to various problems about plants. 
   
-  ## Dataset![](https://github.com/Zhu-Pengming/Flora-Talks/blob/main/dataset.xlsx)
+  ## Dataset
+  ![](https://github.com/Zhu-Pengming/Flora-Talks/blob/main/dataset.xlsx)
   The dataset is loaded from an Excel file stored on Google Drive, containing pairs of questions and answers about plant diseases. The data is processed to fit the model's input requirements.
   
   
-  ## Training
-  The model is trained to minimize the cross-entropy loss using the Adam optimizer. The training process involves feeding batches of tokenized text data into the model, performing backpropagation, and updating the model's weights. Training progress is logged every ten batches, displaying the current epoch, batch index, and loss.
+  ## Overview of the Model
   
-  ## Testing
-  The model does not specify a separate testing phase within the provided script. However, evaluation typically involves checking the model's performance on unseen data to validate its generalization capabilities.
+  ### Input Layer
+  The model input is a plant care problem. The text is processed through GPT-2's word divider to generate the corresponding input vector.
+  
+  ### Hidden Layer
+  The GPT-2 model has multiple hidden layers, each containing many neurons that process input data through a fully connected layer.
+  
+  ### Output Layer
+  The output layer generates the final text output of the model, which is the answer to the input question.
+  
+  ### Loss Function
+  The cross entropy loss function is used to measure the difference between the generated text and the real answer. Losses are optimized through backpropagation during training.
+  
+  ### Weight and Bias
+  Each connection of the GPT-2 model has a corresponding weight and bias, and these parameters are constantly adjusted during training to minimize losses.
+  
+  ### Activate Function
+  GPT-2 models use a variety of activation functions, such as ReLU, to help the model learn complex patterns when processing and generating natural language text.
+  
+  ### Optimization Function
+  Using the Adam optimizer, the model parameters are constantly adjusted during training to improve the accuracy of the generated answers.
+  
+  ### Training Process
+  The training function implements model training through the following steps:
+  - Iterate over epochs and batches.
+  - Pass inputs through the model and calculate losses.
+  - Perform backpropagation and optimization.
+  - Print losses every 10 batches to monitor training progress.
+  Once the training is complete, the fine-tuned model and word divider are saved to Google Drive.
+  
+  ### Generate Text
+  A function is defined to generate text based on input prompts. Use nucleus sampling and top-k sampling to ensure variety and quality of generated text.
+
   
   ## Usage
   To use the fine-tuned model:
@@ -45,7 +78,8 @@ The data preparation phase involves scraping note and comment data from Xiaohong
       transformers library (from Hugging Face)
       pandas
       Google Colab for execution environment
-  ## File![](https://github.com/Zhu-Pengming/Flora-Talks/blob/main/PlantAdvisorGPT2%26Model_realization_of_plant_disease_recognition.ipynb)
+  ## File
+  ![](https://github.com/Zhu-Pengming/Flora-Talks/blob/main/PlantAdvisorGPT2%26Model_realization_of_plant_disease_recognition.ipynb)
 
   
 
@@ -80,7 +114,8 @@ This project contains a deep convolutional neural network (DeepCNN) model for im
   - datasets
   - PIL
     
-  ## File![](https://github.com/Zhu-Pengming/Flora-Talks/blob/main/PlantDiseaseDetection_Image.ipynb)
+  ## File
+  ![](https://github.com/Zhu-Pengming/Flora-Talks/blob/main/PlantDiseaseDetection_Image.ipynb)
 
 
 
