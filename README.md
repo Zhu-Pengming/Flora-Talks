@@ -1,4 +1,4 @@
-# Natural language processing 
+# Natural language processing
 
 ## Data Preparation
 
@@ -23,8 +23,9 @@ The data preparation phase involves scraping note and comment data from Xiaohong
   ## Model Architecture
   The model utilizes the pre-trained GPT-2, a large transformer-based model known for its effectiveness in natural language processing tasks. The fine-tuning adapts GPT-2 to generate responses based on plant disease-related queries.
   
-  ## Dataset
+  ## Dataset![](https://github.com/Zhu-Pengming/Flora-Talks/blob/main/dataset.xlsx)
   The dataset is loaded from an Excel file stored on Google Drive, containing pairs of questions and answers about plant diseases. The data is processed to fit the model's input requirements.
+  
   
   ## Training
   The model is trained to minimize the cross-entropy loss using the Adam optimizer. The training process involves feeding batches of tokenized text data into the model, performing backpropagation, and updating the model's weights. Training progress is logged every ten batches, displaying the current epoch, batch index, and loss.
@@ -44,6 +45,7 @@ The data preparation phase involves scraping note and comment data from Xiaohong
       transformers library (from Hugging Face)
       pandas
       Google Colab for execution environment
+  ## File![](https://github.com/Zhu-Pengming/Flora-Talks/blob/main/PlantAdvisorGPT2%26Model_realization_of_plant_disease_recognition.ipynb)
 
   
 
@@ -55,8 +57,7 @@ This project contains a deep convolutional neural network (DeepCNN) model for im
   
   The model consists of six convolutional layers, three fully connected layers, and three max pooling layers. The convolutional layers are used to extract features from the input images, the max pooling layers are used to reduce the spatial dimensions of the output from the convolutional layers, and the fully connected layers are used to perform classification based on the extracted features.
   
-  ## Dataset
-  ![](https://huggingface.co/datasets/NouRed/plant-disease-recognition)
+  ## Dataset![](https://huggingface.co/datasets/NouRed/plant-disease-recognition)
   The model is trained and tested on a dataset loaded using the `load_dataset` function from the `datasets` library. The dataset is split into training, validation, and testing sets.
   
   ## Training
@@ -78,6 +79,8 @@ This project contains a deep convolutional neural network (DeepCNN) model for im
   - torchvision
   - datasets
   - PIL
+    
+  ## File![](https://github.com/Zhu-Pengming/Flora-Talks/blob/main/PlantDiseaseDetection_Image.ipynb)
 
 
 
